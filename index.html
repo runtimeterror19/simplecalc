@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>"Web App – Simple Interest Calculator"</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+   
+    <div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+        <br/>
+        
+        <div class="label_indent">
+            
+            <!-- Input the starting amount -->
+            <!-- The amount must be greater than zero -->
+            <!-- If the amount is less than or equal to zero an alert is issued and the focus is set to the Amount -->
+            <div class="flex-container">
+                <div> <!-- flex element 1 -->
+                    Amount
+                </div> <!-- flex element 1 -->
+            
+                <div> <!-- flex element 2 -->
+                    <div class="number_lineup">
+                        <input type="number" id="principal" onchange="validateAmount()">
+                    </div>
+                </div> <!-- flex element 2 -->
+                
+                <br/><br/>
+            </div> <!-- flex container -->
+        
+            
+            <!---<div class="label_indent">-->
+            <!-- Move the slider to the desired interest rate and display it next to the slider -->
+            <!-- Interest rates vary from 1 to 20 in steps of .25 -->
+            <div class="flex-container">
+                <div> <!-- flex element 1 -->
+                    Rate 
+                </div> <!-- flex element 1 -->
+            
+                <div> <!-- flex element 2 -->
+                    <div class="rate_lineup">
+                        <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" onchange="showValue(this.value)"> 
+                        <span id="rate_val">10.25</span> <span id="percent">%</span>
+                    </div>
+                </div> <!-- flex element 2 -->
+            
+                <br><br/>
+            </div> <!-- flex container -->
+        
+            <!---<div class="label_indent">-->
+            <!-- The number of years interest will be calculated -->
+            <!-- Possible values span 1 to 10 years -->
+            <div class="flex-container">
+                <div> <!-- flex element 1 -->
+                    No. of Years 
+                </div> <!-- flex element 1 -->
+            
+                <div> <!-- flex element 2 -->
+                    <div class="years_lineup">
+                        <select id="years" size="1" min="1" max="50">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div> <!-- flex element 2 -->
+                
+                <br><br/>
+            </div> <!-- flex container -->
+        
+            
+            <!---<div class="label_indent">-->
+            <!-- When the button is clicked, interest to be paid on the entered amount, interest rate, and years is calculated -->
+            <div class="flex-container">
+                <div> <!-- flex element 1 -->
+                    <button type="button" onclick="compute()">Compute Interest</button>
+                </div> <!-- flex element 1 -->
+                
+                <br/>
+            </div> <!-- flex container -->
+            
+        </div> <!-- indent -->
+        
+        <div class="result_text">
+            <!-- Entered values and the computed result is displayed -->
+            <span id="result" name="result"></span>
+                
+            <br/><br/>
+        </div>
+        
+        <footer>
+            &#169; Everyone Can Get Rich
+            This Calculator belongs to Shreyas
+        </footer>
+    </div> <!-- main -->
+    </body>
+     
+</html>

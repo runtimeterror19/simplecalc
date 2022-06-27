@@ -1,0 +1,56 @@
+body {
+    background-color:black;
+    font-family:arial;
+    color:white;
+    }
+    
+h1{
+    color:gray;
+    text-align: center;
+    font-family: verdana, sans-serif;
+    font-size: 3em;
+    }
+    
+.maindiv {
+      background-color:white;
+      color: black;
+      width: 750px;
+      padding: 20px;
+      border-radius: 25px;
+      margin: 0 auto;
+    }
+    
+div.label_indent{
+    text-indent: 150px;
+}
+div.number_lineup{
+    text-indent: 75px;
+} 
+div.rate_lineup{
+    text-indent: 105px;
+} 
+div.years_lineup{
+    text-indent: 25px;
+}
+div.result_text{
+    margin-left: 150px;
+}  
+input{
+    display: inline-block;
+    width:110px;
+}
+
+select {
+    display: inline-block;
+    width:25px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: white;
+}
+
+.flex-container > div {
+  background-color: white;
+  font-size: 1.5em;
+}
